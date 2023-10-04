@@ -2,8 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To get the current location when uplaoding the photo of koala</string>
+	<key>NSLocationUsageDescription</key>
+	<string>To get the current location when uplaoding the photo of koala</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To get the current location when uplaoding the photo of koala</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To get the current location</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To capture Images of the Koala</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>UIApplicationSupportsTabbedSceneCollection</key>
+		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>

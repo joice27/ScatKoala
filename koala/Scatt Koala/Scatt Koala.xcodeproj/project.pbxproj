@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE972ACE0D01001682DF /* AppDelegate.swift */; };
 		15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE992ACE0D01001682DF /* SceneDelegate.swift */; };
-		15DCBE9C2ACE0D01001682DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE9B2ACE0D01001682DF /* ViewController.swift */; };
-		15DCBE9F2ACE0D01001682DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBE9D2ACE0D01001682DF /* Main.storyboard */; };
-		15DCBEA12ACE0D03001682DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEA02ACE0D03001682DF /* Assets.xcassets */; };
 		15DCBEA42ACE0D03001682DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */; };
+		15DCBEAE2ACE0F15001682DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEAD2ACE0F15001682DF /* Main.storyboard */; };
+		15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEAF2ACE12D2001682DF /* SignInViewController.swift */; };
+		15DCBEB22ACE138A001682DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEB12ACE138A001682DF /* Assets.xcassets */; };
+		15DCBEB82ACE1482001682DF /* UploadKoalaSightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEB72ACE1482001682DF /* UploadKoalaSightViewController.swift */; };
+		15DCBEBC2ACE1815001682DF /* UplaodScattDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEBB2ACE1815001682DF /* UplaodScattDetailsViewController.swift */; };
+		15DCBEC02ACE1C20001682DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEBF2ACE1C20001682DF /* HomeViewController.swift */; };
+		15DCBEC32ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEC12ACE1CBD001682DF /* KoalaGallaryCollectionViewCell.xib */; };
+		15DCBEC42ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEC22ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift */; };
+		15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEC72ACE1D8E001682DF /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15DCBE942ACE0D01001682DF /* Scatt Koala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scatt Koala.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DCBE972ACE0D01001682DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DCBE992ACE0D01001682DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15DCBE9B2ACE0D01001682DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15DCBE9E2ACE0D01001682DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		15DCBEA02ACE0D03001682DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15DCBEA32ACE0D03001682DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15DCBEA52ACE0D03001682DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15DCBEAD2ACE0F15001682DF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		15DCBEAF2ACE12D2001682DF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		15DCBEB12ACE138A001682DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15DCBEB72ACE1482001682DF /* UploadKoalaSightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadKoalaSightViewController.swift; sourceTree = "<group>"; };
+		15DCBEBB2ACE1815001682DF /* UplaodScattDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplaodScattDetailsViewController.swift; sourceTree = "<group>"; };
+		15DCBEBF2ACE1C20001682DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		15DCBEC12ACE1CBD001682DF /* KoalaGallaryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KoalaGallaryCollectionViewCell.xib; sourceTree = "<group>"; };
+		15DCBEC22ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoalaGallaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		15DCBEC72ACE1D8E001682DF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,109 @@
 		15DCBE962ACE0D01001682DF /* Scatt Koala */ = {
 			isa = PBXGroup;
 			children = (
-				15DCBE972ACE0D01001682DF /* AppDelegate.swift */,
-				15DCBE992ACE0D01001682DF /* SceneDelegate.swift */,
-				15DCBE9B2ACE0D01001682DF /* ViewController.swift */,
-				15DCBE9D2ACE0D01001682DF /* Main.storyboard */,
-				15DCBEA02ACE0D03001682DF /* Assets.xcassets */,
+				15DCBEC52ACE1D70001682DF /* Information */,
+				15DCBEBD2ACE1BE9001682DF /* HomeView */,
+				15DCBEB92ACE17EC001682DF /* UploadScattDetails */,
+				15DCBEB52ACE1449001682DF /* UploadKoalaSight */,
+				15DCBEAC2ACE0EE3001682DF /* Sign In */,
+				15DCBEAB2ACE0ECF001682DF /* AppDelegate */,
+				15DCBEAD2ACE0F15001682DF /* Main.storyboard */,
 				15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */,
+				15DCBEB12ACE138A001682DF /* Assets.xcassets */,
 				15DCBEA52ACE0D03001682DF /* Info.plist */,
 			);
 			path = "Scatt Koala";
+			sourceTree = "<group>";
+		};
+		15DCBEAB2ACE0ECF001682DF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBE972ACE0D01001682DF /* AppDelegate.swift */,
+				15DCBE992ACE0D01001682DF /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		15DCBEAC2ACE0EE3001682DF /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEC92ACE1E48001682DF /* View */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		15DCBEB52ACE1449001682DF /* UploadKoalaSight */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEB62ACE1466001682DF /* View */,
+			);
+			path = UploadKoalaSight;
+			sourceTree = "<group>";
+		};
+		15DCBEB62ACE1466001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEB72ACE1482001682DF /* UploadKoalaSightViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBEB92ACE17EC001682DF /* UploadScattDetails */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEBA2ACE17FE001682DF /* View */,
+			);
+			path = UploadScattDetails;
+			sourceTree = "<group>";
+		};
+		15DCBEBA2ACE17FE001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEBB2ACE1815001682DF /* UplaodScattDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBEBD2ACE1BE9001682DF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEBE2ACE1BFC001682DF /* View */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		15DCBEBE2ACE1BFC001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEBF2ACE1C20001682DF /* HomeViewController.swift */,
+				15DCBEC22ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift */,
+				15DCBEC12ACE1CBD001682DF /* KoalaGallaryCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBEC52ACE1D70001682DF /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEC62ACE1D7C001682DF /* View */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		15DCBEC62ACE1D7C001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEC72ACE1D8E001682DF /* InfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBEC92ACE1E48001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEAF2ACE12D2001682DF /* SignInViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DCBEA42ACE0D03001682DF /* LaunchScreen.storyboard in Resources */,
-				15DCBEA12ACE0D03001682DF /* Assets.xcassets in Resources */,
-				15DCBE9F2ACE0D01001682DF /* Main.storyboard in Resources */,
+				15DCBEB22ACE138A001682DF /* Assets.xcassets in Resources */,
+				15DCBEC32ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.xib in Resources */,
+				15DCBEAE2ACE0F15001682DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +245,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15DCBE9C2ACE0D01001682DF /* ViewController.swift in Sources */,
 				15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */,
+				15DCBEC42ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift in Sources */,
 				15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */,
+				15DCBEB82ACE1482001682DF /* UploadKoalaSightViewController.swift in Sources */,
+				15DCBEBC2ACE1815001682DF /* UplaodScattDetailsViewController.swift in Sources */,
+				15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */,
+				15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */,
+				15DCBEC02ACE1C20001682DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		15DCBE9D2ACE0D01001682DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15DCBE9E2ACE0D01001682DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,6 +404,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +433,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
