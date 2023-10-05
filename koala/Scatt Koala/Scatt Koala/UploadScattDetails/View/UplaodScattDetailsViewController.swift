@@ -10,6 +10,7 @@ import CoreLocation
 
 class UplaodScattDetailsViewController: UIViewController {
     
+    @IBOutlet weak var numberOfScatCollectedField: UITextField!
     @IBOutlet weak var scattPhotoView: UIView!
     @IBOutlet weak var scattConditionLabel: UILabel!
     @IBOutlet weak var scattConditionView: UIView!
@@ -21,8 +22,12 @@ class UplaodScattDetailsViewController: UIViewController {
     @IBOutlet weak var excellentButton: UIButton!
     @IBOutlet weak var scattPhotoImageView: UIImageView!
     
+    @IBOutlet weak var scattPhotoDescriptionLabel: UILabel!
     let locationManager = CLLocationManager()
-    var viewModel: KoalaUplaodViewModel = KoalaUplaodViewModel()
+    var viewModel: KoalaScatUploadViewModel = KoalaScatUploadViewModel()
+    var latitude: String = ""
+    var longitude: String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,31 +94,48 @@ class UplaodScattDetailsViewController: UIViewController {
     
     @IBAction func excellentPhotoViewButtonClicked(_ sender: Any) {
         scattPhotoView.isHidden = false
-        scattPhotoImageView.image = UIImage(named: "good 2")
+        scattPhotoImageView.image = UIImage(named: "excellent")
+        scattPhotoDescriptionLabel.text = "Scats in excellenet condition appear fresh and have a glossy surface"
     }
     
     @IBAction func goodPhotoViewButtonClicked(_ sender: Any) {
         scattPhotoView.isHidden = false
-        scattPhotoImageView.image = UIImage(named: "good 3")
+        scattPhotoImageView.image = UIImage(named: "good")
 
     }
     
     @IBAction func poorButtonPhotoViewClicked(_ sender: Any) {
         scattPhotoView.isHidden = false
-        scattPhotoImageView.image = UIImage(named: "excellent 1")
-
+        scattPhotoImageView.image = UIImage(named: "poor")
     }
     
     @IBAction func submitButtonClicked(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.uploadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: false)
+    }
+    
+    func uploadData() {
         showActivityIndicator()
-        viewModel.uploadKoalaDetails(koalaStatus: "koalaStatus", currentLocation: "currentLocation", lat: "latitude", long: "longitude", treeSpecies: "treeSpecie", onCompletion: {response, status in
+        viewModel.uploadKoalaDetails(koalaPresent: koalaPresentOrNotLabel.text ?? "", numberOfScatCollected: numberOfScatCollectedField.text ?? "", scatCondition: scattConditionLabel.text ?? "", currentLocation: currentLocationLabel.text ?? "", lat: latitude, long: longitude, treeSpecies: "", onCompletion: { response, status in
             self.hideActivityIndicator()
-            if status {
-                self.showAlert(message: "Successfully uploaded the details")
+            if status, let uploadId = response {
+                self.showSuccessView(uploadId: uploadId)
             } else {
-                self.showAlert(message: "Error to uplod the details, please try again")
+                self.showAlert(message: "Error to upload the details")
             }
         })
+    }
+    
+    func showSuccessView(uploadId: String) {
+        DispatchQueue.main.async {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "scatUploadSuccess") as! ScatUploadSuccessViewController
+            vc.uploadId = uploadId
+            self.present(vc, animated: false)
+        }
     }
     
     func showAlert(message: String) {
@@ -130,6 +152,8 @@ extension UplaodScattDetailsViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             if let location = locations.last {
                 let geocoder = CLGeocoder()
+                self.latitude = String(location.coordinate.latitude)
+                self.longitude = String(location.coordinate.longitude)
 
                 geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
                     if let error = error {
@@ -139,7 +163,6 @@ extension UplaodScattDetailsViewController: CLLocationManagerDelegate{
 
                     if let placemark = placemarks?.first {
                         if let city = placemark.locality {
-                            print("Current city: \(city)")
                             self.locationManager.stopUpdatingLocation()
                             self.currentLocationLabel.text = city
                         } else if let area = placemark.subLocality {

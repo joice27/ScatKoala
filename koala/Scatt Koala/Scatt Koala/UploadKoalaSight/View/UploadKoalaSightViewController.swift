@@ -57,6 +57,15 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     }
     
     @IBAction func submitButtonPress(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.uploadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: false)
+    }
+    
+    func uploadData() {
         if let koalaStatus = koalaStatusLabel.text, let treeSpecie = treeSpeciesLabel.text {
             showActivityIndicator()
             viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: currentLocation, lat: latitude, long: longitude, treeSpecies: treeSpecie, onCompletion: {response, status in
@@ -67,7 +76,6 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
                     self.showAlert(message: "Error to uplod file, please try again")
                 }
             })
-
         }
     }
     
@@ -128,7 +136,6 @@ extension UploadKoalaSightViewController: CLLocationManagerDelegate{
 
                     if let placemark = placemarks?.first {
                         if let city = placemark.locality {
-                            print("Current city: \(city)")
                             self.currentLocation = city
                             self.locationManager.stopUpdatingLocation()
                             self.locationLabel.text = city

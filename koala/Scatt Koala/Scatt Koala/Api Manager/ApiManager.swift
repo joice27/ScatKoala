@@ -10,6 +10,7 @@ struct NetworkManager {
         case login
         case create
         case userCreation
+        case scatCreate
         
         var path: String {
             switch self {
@@ -19,6 +20,8 @@ struct NetworkManager {
                 return "/koala/create"
             case .userCreation:
                 return "userDetail/create"
+            case .scatCreate:
+                return "scat/create"
             }
         }
     }
@@ -65,7 +68,6 @@ struct NetworkManager {
             completion(.failure(.invalidURL))
             return
         }
-        
         let url = baseURL.appendingPathComponent(endpoint.path)
         
         var request = URLRequest(url: url)

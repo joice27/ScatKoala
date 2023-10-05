@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */; };
 		15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE972ACE0D01001682DF /* AppDelegate.swift */; };
 		15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE992ACE0D01001682DF /* SceneDelegate.swift */; };
 		15DCBEA42ACE0D03001682DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatUploadSuccessViewController.swift; sourceTree = "<group>"; };
 		15DCBE942ACE0D01001682DF /* Scatt Koala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scatt Koala.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DCBE972ACE0D01001682DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DCBE992ACE0D01001682DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1503187F2ACF136F007A9F1A /* Scat Upload Success */ = {
+			isa = PBXGroup;
+			children = (
+				150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */,
+			);
+			path = "Scat Upload Success";
+			sourceTree = "<group>";
+		};
 		15DCBE8B2ACE0D01001682DF = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		15DCBE962ACE0D01001682DF /* Scatt Koala */ = {
 			isa = PBXGroup;
 			children = (
+				1503187F2ACF136F007A9F1A /* Scat Upload Success */,
 				15DCBED32ACE32CD001682DF /* Extensions */,
 				15DCBECA2ACE1FEA001682DF /* Api Manager */,
 				15DCBEC52ACE1D70001682DF /* Information */,
@@ -386,6 +397,7 @@
 				15DCBEB82ACE1482001682DF /* UploadKoalaSightViewController.swift in Sources */,
 				15DCBEBC2ACE1815001682DF /* UplaodScattDetailsViewController.swift in Sources */,
 				15DCBEDE2ACE40A5001682DF /* KoalaScatResponseModel.swift in Sources */,
+				150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */,
 				15DCBED92ACE3596001682DF /* KoalaResponseModel.swift in Sources */,
 				15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */,
 				15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */,
@@ -535,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
@@ -564,7 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
