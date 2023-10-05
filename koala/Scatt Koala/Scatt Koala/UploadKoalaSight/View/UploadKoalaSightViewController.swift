@@ -19,6 +19,10 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     
     let imagePicker = UIImagePickerController()
     let locationManager = CLLocationManager()
+    var currentLocation: String = ""
+    var latitude: String = ""
+    var longitude: String = ""
+    var viewModel: KoalaUplaodViewModel = KoalaUplaodViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,13 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     func showKoalaType() {
@@ -47,10 +57,18 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     }
     
     @IBAction func submitButtonPress(_ sender: Any) {
-        let alert = UIAlertController(title: "Success", message: "Successfully Uploaded data", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
-        self.present(alert, animated: false)
-        
+        if let koalaStatus = koalaStatusLabel.text, let treeSpecie = treeSpeciesLabel.text {
+            showActivityIndicator()
+            viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: currentLocation, lat: latitude, long: longitude, treeSpecies: treeSpecie, onCompletion: {response, status in
+                self.hideActivityIndicator()
+                if status {
+                    self.showAlert(message: "Successfully uploaded the Image")
+                } else {
+                    self.showAlert(message: "Error to uplod file, please try again")
+                }
+            })
+
+        }
     }
     
     @IBAction func takePhotoClicked(_ sender: Any) {
@@ -75,6 +93,14 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
                 present(alertController, animated: true, completion: nil)
     }
     
+    func showAlert(message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(alert, animated: false)
+        }
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[.originalImage] as? UIImage {
                 self.koalaImageView.image = image
@@ -91,6 +117,8 @@ extension UploadKoalaSightViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             if let location = locations.last {
                 let geocoder = CLGeocoder()
+                self.latitude = String(location.coordinate.latitude)
+                self.longitude = String(location.coordinate.longitude)
 
                 geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
                     if let error = error {
@@ -101,6 +129,7 @@ extension UploadKoalaSightViewController: CLLocationManagerDelegate{
                     if let placemark = placemarks?.first {
                         if let city = placemark.locality {
                             print("Current city: \(city)")
+                            self.currentLocation = city
                             self.locationManager.stopUpdatingLocation()
                             self.locationLabel.text = city
                         } else if let area = placemark.subLocality {

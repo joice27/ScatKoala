@@ -22,6 +22,7 @@ class UplaodScattDetailsViewController: UIViewController {
     @IBOutlet weak var scattPhotoImageView: UIImageView!
     
     let locationManager = CLLocationManager()
+    var viewModel: KoalaUplaodViewModel = KoalaUplaodViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +103,27 @@ class UplaodScattDetailsViewController: UIViewController {
         scattPhotoImageView.image = UIImage(named: "excellent 1")
 
     }
+    
+    @IBAction func submitButtonClicked(_ sender: Any) {
+        showActivityIndicator()
+        viewModel.uploadKoalaDetails(koalaStatus: "koalaStatus", currentLocation: "currentLocation", lat: "latitude", long: "longitude", treeSpecies: "treeSpecie", onCompletion: {response, status in
+            self.hideActivityIndicator()
+            if status {
+                self.showAlert(message: "Successfully uploaded the details")
+            } else {
+                self.showAlert(message: "Error to uplod the details, please try again")
+            }
+        })
+    }
+    
+    func showAlert(message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(alert, animated: false)
+        }
+    }
+
 }
 
 extension UplaodScattDetailsViewController: CLLocationManagerDelegate{

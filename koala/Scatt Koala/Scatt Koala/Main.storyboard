@@ -130,10 +130,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otG-WI-cLa">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-Ke-JnE">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRK-Ke-JnE">
                                                 <rect key="frame" x="5" y="0.0" width="294" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,7 +250,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="signIpButtonClicked:" destination="lzd-y1-Gxx" eventType="touchUpInside" id="n1e-Iv-VwA"/>
+                                    <action selector="signUpButtonClicked:" destination="lzd-y1-Gxx" eventType="touchUpInside" id="m4t-Il-8Ed"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51b-Ud-MyF">
@@ -266,7 +266,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="goBackButtonClicked:" destination="lzd-y1-Gxx" eventType="touchUpInside" id="5o7-Ie-aCO"/>
+                                    <action selector="gpobackButtonClicked:" destination="lzd-y1-Gxx" eventType="touchUpInside" id="8si-SQ-4vp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -286,11 +286,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordField" destination="XoR-el-8Th" id="bGC-3g-kr6"/>
-                        <outlet property="givenNameField" destination="HCM-eO-6Rp" id="hfi-RA-L4u"/>
-                        <outlet property="lastNameField" destination="tHF-d1-7fP" id="rlw-IQ-GeB"/>
-                        <outlet property="passwordField" destination="EFE-oC-RIZ" id="Q1g-CK-kHk"/>
-                        <outlet property="userNameField" destination="tRK-Ke-JnE" id="aGH-Nx-GZm"/>
+                        <outlet property="confirmPasswordField" destination="XoR-el-8Th" id="ndL-Nl-EPq"/>
+                        <outlet property="emailAddressField" destination="tRK-Ke-JnE" id="pXC-F7-PWP"/>
+                        <outlet property="firstNameField" destination="HCM-eO-6Rp" id="gE6-Ne-hl6"/>
+                        <outlet property="lastNameField" destination="tHF-d1-7fP" id="Znh-cM-QCa"/>
+                        <outlet property="passwordField" destination="EFE-oC-RIZ" id="X3r-Hl-hqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcN-vQ-dvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,6 +334,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="records"/>
+                                        <connections>
+                                            <action selector="uploadKoalaSightClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="bPM-Qa-4og"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit Koala Sighting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-lW-6T1">
                                         <rect key="frame" x="35" y="74" width="90" height="36"/>
@@ -353,6 +356,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="uploads"/>
+                                        <connections>
+                                            <action selector="uploadScattClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="hse-cj-KWD"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Scatt Collection" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-zh-YF6">
                                         <rect key="frame" x="140" y="74" width="90" height="31.5"/>
@@ -389,6 +395,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="About"/>
+                                        <connections>
+                                            <action selector="infoButtonClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="841-8b-9P1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-TY-d8k">
                                         <rect key="frame" x="48.5" y="213" width="23" height="16"/>
@@ -407,6 +416,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="logout"/>
+                                        <connections>
+                                            <action selector="logoutButtonClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="bWx-DL-I8F"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv2-5n-t6S">
                                         <rect key="frame" x="163.5" y="213" width="43" height="16"/>
@@ -920,6 +932,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonClicked:" destination="Ic5-ei-x6X" eventType="touchUpInside" id="7Jj-LJ-DnU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-03-boR">
                                 <rect key="frame" x="223" y="306.5" width="50" height="30"/>
