@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var koalaGallaryCollection: UICollectionView!
     @IBOutlet weak var gallaryPageControl: UIPageControl!
     let imageArray: [String] = ["koala1", "koala2", "koala3"]
+    let locationManager = LocationManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func submitKoaalClicked(_ sender: Any) {
+    @IBAction func uploadKoalaSightClicked(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addKoalaSighting") as! UploadKoalaSightViewController
         self.navigationController?.pushViewController(vc, animated: false)
     }
@@ -49,8 +50,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func infoButtonClicked(_ sender: Any) {
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "infoView") as! InformationViewController
-//        self.navigationController?.pushViewController(vc, animated: false)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "infoView") as! InfoViewController
+        self.navigationController?.pushViewController(vc, animated: false)
     }
 }
 

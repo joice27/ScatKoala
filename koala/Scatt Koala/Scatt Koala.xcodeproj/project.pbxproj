@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */; };
+		1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5522AD23CA1003D0CE2 /* LocationManager.swift */; };
+		1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */; };
 		15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE972ACE0D01001682DF /* AppDelegate.swift */; };
 		15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE992ACE0D01001682DF /* SceneDelegate.swift */; };
 		15DCBEA42ACE0D03001682DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */; };
@@ -19,9 +22,23 @@
 		15DCBEC32ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEC12ACE1CBD001682DF /* KoalaGallaryCollectionViewCell.xib */; };
 		15DCBEC42ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEC22ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift */; };
 		15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEC72ACE1D8E001682DF /* InfoViewController.swift */; };
+		15DCBECC2ACE2018001682DF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBECB2ACE2018001682DF /* ApiManager.swift */; };
+		15DCBECF2ACE21F7001682DF /* SignInResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBECE2ACE21F7001682DF /* SignInResponseModel.swift */; };
+		15DCBED22ACE2C7C001682DF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBED12ACE2C7C001682DF /* ViewModel.swift */; };
+		15DCBED52ACE32DB001682DF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBED42ACE32DB001682DF /* File.swift */; };
+		15DCBED92ACE3596001682DF /* KoalaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBED82ACE3596001682DF /* KoalaResponseModel.swift */; };
+		15DCBEDB2ACE35AF001682DF /* KoalaUplaodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEDA2ACE35AF001682DF /* KoalaUplaodViewModel.swift */; };
+		15DCBEDE2ACE40A5001682DF /* KoalaScatResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEDD2ACE40A5001682DF /* KoalaScatResponseModel.swift */; };
+		15DCBEE12ACE40E9001682DF /* KoalaScatUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEE02ACE40E9001682DF /* KoalaScatUploadViewModel.swift */; };
+		15DCBEE72ACE4379001682DF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEE62ACE4379001682DF /* SignUpViewController.swift */; };
+		15DCBEE92ACE45EC001682DF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEE82ACE45EC001682DF /* SignUpViewModel.swift */; };
+		15DCBEEB2ACE4798001682DF /* SignUpResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBEEA2ACE4798001682DF /* SignUpResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatUploadSuccessViewController.swift; sourceTree = "<group>"; };
+		1556E5522AD23CA1003D0CE2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		15DCBE942ACE0D01001682DF /* Scatt Koala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scatt Koala.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DCBE972ACE0D01001682DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DCBE992ACE0D01001682DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,17 @@
 		15DCBEC12ACE1CBD001682DF /* KoalaGallaryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KoalaGallaryCollectionViewCell.xib; sourceTree = "<group>"; };
 		15DCBEC22ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoalaGallaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		15DCBEC72ACE1D8E001682DF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		15DCBECB2ACE2018001682DF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		15DCBECE2ACE21F7001682DF /* SignInResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseModel.swift; sourceTree = "<group>"; };
+		15DCBED12ACE2C7C001682DF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		15DCBED42ACE32DB001682DF /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		15DCBED82ACE3596001682DF /* KoalaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoalaResponseModel.swift; sourceTree = "<group>"; };
+		15DCBEDA2ACE35AF001682DF /* KoalaUplaodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoalaUplaodViewModel.swift; sourceTree = "<group>"; };
+		15DCBEDD2ACE40A5001682DF /* KoalaScatResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoalaScatResponseModel.swift; sourceTree = "<group>"; };
+		15DCBEE02ACE40E9001682DF /* KoalaScatUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoalaScatUploadViewModel.swift; sourceTree = "<group>"; };
+		15DCBEE62ACE4379001682DF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		15DCBEE82ACE45EC001682DF /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		15DCBEEA2ACE4798001682DF /* SignUpResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1503187F2ACF136F007A9F1A /* Scat Upload Success */ = {
+			isa = PBXGroup;
+			children = (
+				150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */,
+			);
+			path = "Scat Upload Success";
+			sourceTree = "<group>";
+		};
+		1556E5512AD23C8B003D0CE2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1556E5522AD23CA1003D0CE2 /* LocationManager.swift */,
+				1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		15DCBE8B2ACE0D01001682DF = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +113,15 @@
 		15DCBE962ACE0D01001682DF /* Scatt Koala */ = {
 			isa = PBXGroup;
 			children = (
+				1556E5512AD23C8B003D0CE2 /* Common */,
+				1503187F2ACF136F007A9F1A /* Scat Upload Success */,
+				15DCBED32ACE32CD001682DF /* Extensions */,
+				15DCBECA2ACE1FEA001682DF /* Api Manager */,
 				15DCBEC52ACE1D70001682DF /* Information */,
 				15DCBEBD2ACE1BE9001682DF /* HomeView */,
 				15DCBEB92ACE17EC001682DF /* UploadScattDetails */,
 				15DCBEB52ACE1449001682DF /* UploadKoalaSight */,
+				15DCBEE22ACE432D001682DF /* Sign Up */,
 				15DCBEAC2ACE0EE3001682DF /* Sign In */,
 				15DCBEAB2ACE0ECF001682DF /* AppDelegate */,
 				15DCBEAD2ACE0F15001682DF /* Main.storyboard */,
@@ -94,6 +144,8 @@
 		15DCBEAC2ACE0EE3001682DF /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				15DCBECD2ACE21E2001682DF /* Model */,
+				15DCBED02ACE2C64001682DF /* View Model */,
 				15DCBEC92ACE1E48001682DF /* View */,
 			);
 			path = "Sign In";
@@ -102,6 +154,8 @@
 		15DCBEB52ACE1449001682DF /* UploadKoalaSight */ = {
 			isa = PBXGroup;
 			children = (
+				15DCBED72ACE3576001682DF /* Model */,
+				15DCBED62ACE3569001682DF /* ViewModel */,
 				15DCBEB62ACE1466001682DF /* View */,
 			);
 			path = UploadKoalaSight;
@@ -118,6 +172,8 @@
 		15DCBEB92ACE17EC001682DF /* UploadScattDetails */ = {
 			isa = PBXGroup;
 			children = (
+				15DCBEDC2ACE408F001682DF /* Model */,
+				15DCBEDF2ACE40CA001682DF /* ViewModel */,
 				15DCBEBA2ACE17FE001682DF /* View */,
 			);
 			path = UploadScattDetails;
@@ -171,6 +227,104 @@
 				15DCBEAF2ACE12D2001682DF /* SignInViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBECA2ACE1FEA001682DF /* Api Manager */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBECB2ACE2018001682DF /* ApiManager.swift */,
+			);
+			path = "Api Manager";
+			sourceTree = "<group>";
+		};
+		15DCBECD2ACE21E2001682DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBECE2ACE21F7001682DF /* SignInResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15DCBED02ACE2C64001682DF /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBED12ACE2C7C001682DF /* ViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		15DCBED32ACE32CD001682DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBED42ACE32DB001682DF /* File.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15DCBED62ACE3569001682DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEDA2ACE35AF001682DF /* KoalaUplaodViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15DCBED72ACE3576001682DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBED82ACE3596001682DF /* KoalaResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15DCBEDC2ACE408F001682DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEDD2ACE40A5001682DF /* KoalaScatResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15DCBEDF2ACE40CA001682DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEE02ACE40E9001682DF /* KoalaScatUploadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		15DCBEE22ACE432D001682DF /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEE32ACE4340001682DF /* Model */,
+				15DCBEE52ACE4354001682DF /* ViewModel */,
+				15DCBEE42ACE4348001682DF /* View */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		15DCBEE32ACE4340001682DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEEA2ACE4798001682DF /* SignUpResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15DCBEE42ACE4348001682DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEE62ACE4379001682DF /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DCBEE52ACE4354001682DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				15DCBEE82ACE45EC001682DF /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,13 +399,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DCBEDB2ACE35AF001682DF /* KoalaUplaodViewModel.swift in Sources */,
+				1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */,
 				15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */,
+				15DCBED52ACE32DB001682DF /* File.swift in Sources */,
+				15DCBECC2ACE2018001682DF /* ApiManager.swift in Sources */,
+				15DCBEE92ACE45EC001682DF /* SignUpViewModel.swift in Sources */,
 				15DCBEC42ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift in Sources */,
+				15DCBEE72ACE4379001682DF /* SignUpViewController.swift in Sources */,
+				15DCBED22ACE2C7C001682DF /* ViewModel.swift in Sources */,
 				15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */,
 				15DCBEB82ACE1482001682DF /* UploadKoalaSightViewController.swift in Sources */,
 				15DCBEBC2ACE1815001682DF /* UplaodScattDetailsViewController.swift in Sources */,
+				15DCBEDE2ACE40A5001682DF /* KoalaScatResponseModel.swift in Sources */,
+				150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */,
+				15DCBED92ACE3596001682DF /* KoalaResponseModel.swift in Sources */,
 				15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */,
 				15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */,
+				15DCBEE12ACE40E9001682DF /* KoalaScatUploadViewModel.swift in Sources */,
+				1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */,
+				15DCBEEB2ACE4798001682DF /* SignUpResponseModel.swift in Sources */,
+				15DCBECF2ACE21F7001682DF /* SignInResponseModel.swift in Sources */,
 				15DCBEC02ACE1C20001682DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
@@ -424,7 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
