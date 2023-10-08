@@ -9,6 +9,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var emailAddressField: UITextField!
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
@@ -19,6 +21,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        goBackButton.setCornerRadius()
+        signUpButton.setCornerRadius()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
@@ -62,5 +67,6 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func gpobackButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: false)
     }
 }

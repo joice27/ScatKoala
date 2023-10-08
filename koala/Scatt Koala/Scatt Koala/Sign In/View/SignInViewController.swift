@@ -10,12 +10,14 @@ import UIKit
 class SignInViewController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
     let viewModel: SignInViewModel = SignInViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        signInButton.setCornerRadius()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
     }

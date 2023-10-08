@@ -26,6 +26,27 @@ struct NetworkManager {
         }
     }
     
+    enum ApiType: String {
+        case POST
+        case GET
+        case PUT
+        case DELETE
+        
+        var path: String {
+            switch self {
+                
+            case .POST:
+                return "POST"
+            case .GET:
+                return "GET"
+            case .PUT:
+                return "PUT"
+            case .DELETE:
+                return "DELETE"
+            }
+        }
+    }
+    
     enum NetworkError: Error {
         case invalidURL
         case requestFailed(Error)
@@ -58,11 +79,12 @@ struct NetworkManager {
 
     static func performRequest<T: Decodable>(
         endpoint: Endpoint,
-        method: String,
+        method: ApiType,
         parameters: [String: Any]? = nil,
         headers: [String: String]? = nil,
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
+        
         let baseURLString = "https://us-central1-koala-ba9f9.cloudfunctions.net/app/api"
         guard let baseURL = URL(string: baseURLString) else {
             completion(.failure(.invalidURL))
@@ -71,7 +93,7 @@ struct NetworkManager {
         let url = baseURL.appendingPathComponent(endpoint.path)
         
         var request = URLRequest(url: url)
-        request.httpMethod = method
+        request.httpMethod = method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let headers = headers {
@@ -80,7 +102,7 @@ struct NetworkManager {
             }
         }
         
-        if method != "GET" {
+        if method.rawValue != ApiType.GET.rawValue {
             do {
                 // Convert the parameters dictionary to JSON data
                 if let parameters = parameters {

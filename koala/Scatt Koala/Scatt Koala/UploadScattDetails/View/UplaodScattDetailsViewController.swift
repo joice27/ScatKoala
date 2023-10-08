@@ -10,6 +10,8 @@ import CoreLocation
 
 class UplaodScattDetailsViewController: UIViewController {
     
+    @IBOutlet weak var treeSpeciesFeild: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var numberOfScatCollectedField: UITextField!
     @IBOutlet weak var scattPhotoView: UIView!
     @IBOutlet weak var scattConditionLabel: UILabel!
@@ -23,20 +25,13 @@ class UplaodScattDetailsViewController: UIViewController {
     @IBOutlet weak var scattPhotoImageView: UIImageView!
     
     @IBOutlet weak var scattPhotoDescriptionLabel: UILabel!
-    let locationManager = CLLocationManager()
     var viewModel: KoalaScatUploadViewModel = KoalaScatUploadViewModel()
-    var latitude: String = ""
-    var longitude: String = ""
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
+         
+        submitButton.setCornerRadius()
         scattConditionView.isHidden = true
         scattPhotoView.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
@@ -120,7 +115,7 @@ class UplaodScattDetailsViewController: UIViewController {
     
     func uploadData() {
         showActivityIndicator()
-        viewModel.uploadKoalaDetails(koalaPresent: koalaPresentOrNotLabel.text ?? "", numberOfScatCollected: numberOfScatCollectedField.text ?? "", scatCondition: scattConditionLabel.text ?? "", currentLocation: currentLocationLabel.text ?? "", lat: latitude, long: longitude, treeSpecies: "", onCompletion: { response, status in
+        viewModel.uploadKoalaDetails(koalaPresent: koalaPresentOrNotLabel.text ?? "", numberOfScatCollected: numberOfScatCollectedField.text ?? "", scatCondition: scattConditionLabel.text ?? "", currentLocation: LocationManager.shared.getCurrentLocation(), lat: LocationManager.shared.latitude, long: LocationManager.shared.longitude, treeSpecies: treeSpeciesFeild.text ?? "", onCompletion: { response, status in
             self.hideActivityIndicator()
             if status, let uploadId = response {
                 self.showSuccessView(uploadId: uploadId)
@@ -147,32 +142,4 @@ class UplaodScattDetailsViewController: UIViewController {
     }
 
 }
-
-extension UplaodScattDetailsViewController: CLLocationManagerDelegate{
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            if let location = locations.last {
-                let geocoder = CLGeocoder()
-                self.latitude = String(location.coordinate.latitude)
-                self.longitude = String(location.coordinate.longitude)
-
-                geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-                    if let error = error {
-                        print("Reverse geocoding error: \(error.localizedDescription)")
-                        return
-                    }
-
-                    if let placemark = placemarks?.first {
-                        if let city = placemark.locality {
-                            self.locationManager.stopUpdatingLocation()
-                            self.currentLocationLabel.text = city
-                        } else if let area = placemark.subLocality {
-                            print("Current area: \(area)")
-                        } else {
-                            print("Location information unavailable")
-                        }
-                    }
-                }
-            }
-        }
-    }
 

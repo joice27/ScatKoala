@@ -9,7 +9,7 @@ import Foundation
 
 class KoalaScatUploadViewModel {
     func uploadKoalaDetails(koalaPresent: String, numberOfScatCollected: String, scatCondition: String, currentLocation: String, lat: String, long: String, treeSpecies: String, onCompletion: @escaping (String?, Bool) -> ()) {
-        NetworkManager.performRequest(endpoint: .scatCreate, method: "POST", parameters: ["koalaPresent": koalaPresent, "currentLocation": currentLocation, "lat": lat, "long": long, "treeSpecies": treeSpecies, "numberOfScatCollected": numberOfScatCollected, "scatCondition": scatCondition])
+        NetworkManager.performRequest(endpoint: .scatCreate, method: .POST, parameters: ["koalaPresent": koalaPresent, "currentLocation": currentLocation, "lat": lat, "long": long, "treeSpecies": treeSpecies, "numberOfScatCollected": numberOfScatCollected, "scatCondition": scatCondition])
         { (result: Result<KoalaResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):

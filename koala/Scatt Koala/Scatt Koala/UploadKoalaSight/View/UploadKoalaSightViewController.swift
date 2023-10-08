@@ -11,7 +11,9 @@ import CoreLocation
 class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var treeSpeciesLabel: UILabel!
-    
+    @IBOutlet weak var treeSpeciesField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var koalaStatusLabel: UILabel!
     @IBOutlet weak var koalaTypeButton: UIButton!
@@ -19,23 +21,24 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     
     let imagePicker = UIImagePickerController()
     let locationManager = CLLocationManager()
-    var currentLocation: String = ""
-    var latitude: String = ""
-    var longitude: String = ""
     var viewModel: KoalaUplaodViewModel = KoalaUplaodViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        submitButton.setCornerRadius()
+        takePhotoButton.setCornerRadius()
         imagePicker.delegate = self
         showKoalaType()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        locationLabel.text = LocationManager.shared.getCurrentLocation()
     }
     
     @objc func handleTap() {
@@ -66,9 +69,9 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     }
     
     func uploadData() {
-        if let koalaStatus = koalaStatusLabel.text, let treeSpecie = treeSpeciesLabel.text {
+        if let koalaStatus = koalaStatusLabel.text, let treeSpecies = treeSpeciesField.text {
             showActivityIndicator()
-            viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: currentLocation, lat: latitude, long: longitude, treeSpecies: treeSpecie, onCompletion: {response, status in
+            viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: LocationManager.shared.getCurrentLocation(), lat: LocationManager.shared.latitude, long: LocationManager.shared.longitude, treeSpecies: treeSpecies, onCompletion: {response, status in
                 self.hideActivityIndicator()
                 if status {
                     self.showAlert(message: "Successfully uploaded the Image")
@@ -97,7 +100,6 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
                 alertController.addAction(cameraAction)
                 alertController.addAction(photoLibraryAction)
                 alertController.addAction(cancelAction)
-
                 present(alertController, animated: true, completion: nil)
     }
     
@@ -121,31 +123,3 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
         }
 }
 
-extension UploadKoalaSightViewController: CLLocationManagerDelegate{
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            if let location = locations.last {
-                let geocoder = CLGeocoder()
-                self.latitude = String(location.coordinate.latitude)
-                self.longitude = String(location.coordinate.longitude)
-
-                geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-                    if let error = error {
-                        print("Reverse geocoding error: \(error.localizedDescription)")
-                        return
-                    }
-
-                    if let placemark = placemarks?.first {
-                        if let city = placemark.locality {
-                            self.currentLocation = city
-                            self.locationManager.stopUpdatingLocation()
-                            self.locationLabel.text = city
-                        } else if let area = placemark.subLocality {
-                            print("Current area: \(area)")
-                        } else {
-                            print("Location information unavailable")
-                        }
-                    }
-                }
-            }
-        }
-    }

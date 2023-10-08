@@ -9,7 +9,7 @@ import Foundation
 
 class SignUpViewModel {
     func SignUp(email: String, password: String, firstName: String, lastName: String, omCompletion: @escaping (String?, Bool) -> ()) {
-        NetworkManager.performRequest(endpoint: .userCreation, method: "POST", parameters: ["email": email, "password": password, "lastName": lastName, "firstName": firstName]) { (result: Result<SignUpResponseModel, NetworkManager.NetworkError>) in
+        NetworkManager.performRequest(endpoint: .userCreation, method: .POST, parameters: ["email": email, "password": password, "lastName": lastName, "firstName": firstName]) { (result: Result<SignUpResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
                 omCompletion(response.message?.message, true)

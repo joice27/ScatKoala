@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */; };
+		1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5522AD23CA1003D0CE2 /* LocationManager.swift */; };
+		1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */; };
 		15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE972ACE0D01001682DF /* AppDelegate.swift */; };
 		15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DCBE992ACE0D01001682DF /* SceneDelegate.swift */; };
 		15DCBEA42ACE0D03001682DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DCBEA22ACE0D03001682DF /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatUploadSuccessViewController.swift; sourceTree = "<group>"; };
+		1556E5522AD23CA1003D0CE2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		15DCBE942ACE0D01001682DF /* Scatt Koala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scatt Koala.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DCBE972ACE0D01001682DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DCBE992ACE0D01001682DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 			path = "Scat Upload Success";
 			sourceTree = "<group>";
 		};
+		1556E5512AD23C8B003D0CE2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1556E5522AD23CA1003D0CE2 /* LocationManager.swift */,
+				1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		15DCBE8B2ACE0D01001682DF = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		15DCBE962ACE0D01001682DF /* Scatt Koala */ = {
 			isa = PBXGroup;
 			children = (
+				1556E5512AD23C8B003D0CE2 /* Common */,
 				1503187F2ACF136F007A9F1A /* Scat Upload Success */,
 				15DCBED32ACE32CD001682DF /* Extensions */,
 				15DCBECA2ACE1FEA001682DF /* Api Manager */,
@@ -386,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DCBEDB2ACE35AF001682DF /* KoalaUplaodViewModel.swift in Sources */,
+				1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */,
 				15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */,
 				15DCBED52ACE32DB001682DF /* File.swift in Sources */,
 				15DCBECC2ACE2018001682DF /* ApiManager.swift in Sources */,
@@ -402,6 +417,7 @@
 				15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */,
 				15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */,
 				15DCBEE12ACE40E9001682DF /* KoalaScatUploadViewModel.swift in Sources */,
+				1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */,
 				15DCBEEB2ACE4798001682DF /* SignUpResponseModel.swift in Sources */,
 				15DCBECF2ACE21F7001682DF /* SignInResponseModel.swift in Sources */,
 				15DCBEC02ACE1C20001682DF /* HomeViewController.swift in Sources */,

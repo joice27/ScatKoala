@@ -17,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koala Scat App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muV-Ax-vIB">
+                                <rect key="frame" x="53" y="64" width="269" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="0ja-rc-9Mb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-Tx-NmH">
-                                <rect key="frame" x="57.5" y="164" width="260" height="34"/>
+                                <rect key="frame" x="57.5" y="166" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="axq-F4-V92"/>
                                 </constraints>
@@ -26,7 +35,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyX-vW-Hu2">
-                                <rect key="frame" x="57.5" y="223" width="260" height="34"/>
+                                <rect key="frame" x="57.5" y="225" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Yxh-rY-zqo"/>
                                 </constraints>
@@ -34,20 +43,23 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4H-VX-px2">
-                                <rect key="frame" x="122.5" y="273" width="130" height="35"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.094117647060000004" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="122.5" y="275" width="130" height="35"/>
+                                <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="RpJ-ul-p15"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.23038680070000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signInButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hp8-En-nlP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqe-Wo-9lb">
-                                <rect key="frame" x="47" y="348" width="191" height="29"/>
+                                <rect key="frame" x="52" y="350" width="191" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="Pdh-qk-MWJ"/>
                                 </constraints>
@@ -64,12 +76,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-dV-OWW">
-                                <rect key="frame" x="55" y="402" width="85" height="35"/>
+                                <rect key="frame" x="55" y="404" width="85" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="uBJ-PJ-hW9"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Signup">
+                                <state key="normal" title="Sign up">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -80,18 +92,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.015686274509803921" green="0.070588235294117646" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rPh-Tx-NmH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="1f5-vn-l4R"/>
                             <constraint firstItem="rPh-Tx-NmH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.693333" id="4Sw-gu-okA"/>
                             <constraint firstItem="oyX-vW-Hu2" firstAttribute="width" secondItem="rPh-Tx-NmH" secondAttribute="width" id="9AU-Lu-aKL"/>
                             <constraint firstItem="oyX-vW-Hu2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ENW-pg-zJC"/>
+                            <constraint firstItem="muV-Ax-vIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GcG-dm-ZTr"/>
                             <constraint firstItem="rqe-Wo-9lb" firstAttribute="width" secondItem="oyX-vW-Hu2" secondAttribute="width" multiplier="0.734615" id="I7k-rp-YsI"/>
                             <constraint firstItem="Yan-nk-Hj2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.914667" id="MWx-nN-XSK"/>
+                            <constraint firstItem="rPh-Tx-NmH" firstAttribute="top" secondItem="muV-Ax-vIB" secondAttribute="bottom" constant="60" id="Nuy-Bf-ONX"/>
                             <constraint firstItem="YZu-dV-OWW" firstAttribute="width" secondItem="rqe-Wo-9lb" secondAttribute="width" multiplier="0.445026" id="S9M-hD-afs"/>
-                            <constraint firstItem="rqe-Wo-9lb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-45" id="UAU-OL-RyC"/>
+                            <constraint firstItem="rqe-Wo-9lb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-40" id="UAU-OL-RyC"/>
                             <constraint firstItem="YZu-dV-OWW" firstAttribute="top" secondItem="rqe-Wo-9lb" secondAttribute="bottom" constant="25" id="Wpv-Di-9c4"/>
                             <constraint firstItem="Yan-nk-Hj2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZVs-YO-zOM"/>
                             <constraint firstItem="O4H-VX-px2" firstAttribute="top" secondItem="oyX-vW-Hu2" secondAttribute="bottom" constant="16" id="aLb-Kz-SRO"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Yan-nk-Hj2" secondAttribute="bottom" constant="20" id="crz-IL-Em7"/>
+                            <constraint firstItem="muV-Ax-vIB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hKE-lF-ROR"/>
+                            <constraint firstItem="muV-Ax-vIB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.717333" id="hbc-Bg-LGF"/>
                             <constraint firstItem="O4H-VX-px2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i4q-4T-UJ8"/>
                             <constraint firstItem="YZu-dV-OWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-90" id="kRc-GO-RO5"/>
                             <constraint firstItem="rqe-Wo-9lb" firstAttribute="top" secondItem="O4H-VX-px2" secondAttribute="bottom" constant="40" id="pWc-t7-AOF"/>
@@ -103,6 +118,7 @@
                     <navigationItem key="navigationItem" id="wJW-eV-vxu"/>
                     <connections>
                         <outlet property="passwordField" destination="oyX-vW-Hu2" id="h0H-xC-PSL"/>
+                        <outlet property="signInButton" destination="O4H-VX-px2" id="hOX-S9-vjA"/>
                         <outlet property="userNameField" destination="rPh-Tx-NmH" id="VQg-jc-F96"/>
                     </connections>
                 </viewController>
@@ -233,14 +249,14 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-g1-p49">
                                 <rect key="frame" x="97" y="366" width="181" height="35"/>
-                                <color key="backgroundColor" red="0.15686274509803921" green="0.50196078431372548" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="BrM-Ax-yDc"/>
                                     <constraint firstAttribute="width" constant="181" id="yLU-6q-s1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Signup">
+                                <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -249,7 +265,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51b-Ud-MyF">
                                 <rect key="frame" x="97" y="416" width="181" height="35"/>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="181" id="BlS-6C-jtg"/>
                                     <constraint firstAttribute="height" constant="35" id="lqY-bB-6XL"/>
@@ -289,8 +305,10 @@
                         <outlet property="confirmPasswordField" destination="XoR-el-8Th" id="ndL-Nl-EPq"/>
                         <outlet property="emailAddressField" destination="tRK-Ke-JnE" id="pXC-F7-PWP"/>
                         <outlet property="firstNameField" destination="HCM-eO-6Rp" id="gE6-Ne-hl6"/>
+                        <outlet property="goBackButton" destination="51b-Ud-MyF" id="PFH-pP-gfs"/>
                         <outlet property="lastNameField" destination="tHF-d1-7fP" id="Znh-cM-QCa"/>
                         <outlet property="passwordField" destination="EFE-oC-RIZ" id="X3r-Hl-hqS"/>
+                        <outlet property="signUpButton" destination="1ri-g1-p49" id="0VY-0G-cmz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcN-vQ-dvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -399,9 +417,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv2-5n-t6S">
-                                        <rect key="frame" x="286" y="73" width="43" height="12"/>
+                                        <rect key="frame" x="286" y="73" width="43" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="kvQ-pR-P0N"/>
+                                            <constraint firstAttribute="height" constant="20" id="kvQ-pR-P0N"/>
                                             <constraint firstAttribute="width" constant="43" id="qKg-u9-alL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -560,7 +578,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6N2-ug-USn">
                                 <rect key="frame" x="127.5" y="442" width="120" height="35"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="peQ-o6-ENP"/>
                                 </constraints>
@@ -584,13 +602,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-Rq-9e0">
                                 <rect key="frame" x="84.5" y="527" width="206" height="35"/>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Iyg-Ih-vdy"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -661,6 +679,9 @@
                         <outlet property="koalaStatusLabel" destination="366-D7-W2m" id="Ig0-wW-sNW"/>
                         <outlet property="koalaTypeButton" destination="CZV-pj-qXh" id="i6g-RN-I9e"/>
                         <outlet property="locationLabel" destination="ewM-3n-Wt7" id="ftf-N2-W1K"/>
+                        <outlet property="submitButton" destination="Mit-Rq-9e0" id="1cN-6u-MPG"/>
+                        <outlet property="takePhotoButton" destination="6N2-ug-USn" id="dmU-Za-1XG"/>
+                        <outlet property="treeSpeciesField" destination="CGN-4R-kCq" id="iGO-Sz-8bJ"/>
                         <outlet property="treeSpeciesLabel" destination="QW5-Jv-o0f" id="ri6-td-eih"/>
                     </connections>
                 </viewController>
@@ -1023,24 +1044,24 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqI-5l-lO7">
                                 <rect key="frame" x="84.5" y="516" width="206" height="35"/>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.070588235289999995" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="xRh-yX-aEf"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.15686274510000001" green="0.50196078430000002" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButtonClicked:" destination="Ic5-ei-x6X" eventType="touchUpInside" id="7Jj-LJ-DnU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-03-boR">
-                                <rect key="frame" x="223" y="306.5" width="50" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-03-boR">
+                                <rect key="frame" x="223" y="306.5" width="140" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="OBX-85-yP1"/>
                                     <constraint firstAttribute="height" constant="30" id="Y0M-Wl-6Fz"/>
-                                    <constraint firstAttribute="width" constant="50" id="tul-V0-Foz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1333,6 +1354,8 @@
                         <outlet property="scattPhotoDescriptionLabel" destination="AMr-6w-HzL" id="SXd-6N-85R"/>
                         <outlet property="scattPhotoImageView" destination="Lxo-9j-Qy5" id="5iX-FG-hCX"/>
                         <outlet property="scattPhotoView" destination="t6n-Z4-PQq" id="muW-mW-cFt"/>
+                        <outlet property="submitButton" destination="lqI-5l-lO7" id="SxH-sQ-TiN"/>
+                        <outlet property="treeSpeciesFeild" destination="G8m-j9-mBU" id="5tQ-rh-oTt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bET-h0-DIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1358,6 +1381,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
