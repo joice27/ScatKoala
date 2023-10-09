@@ -19,6 +19,7 @@ class SignInViewController: UIViewController {
         
         signInButton.setCornerRadius()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        self.navigationItem.hidesBackButton = true
         view.addGestureRecognizer(tapGesture)
     }
     
@@ -31,11 +32,11 @@ class SignInViewController: UIViewController {
             showActivityIndicator()
             viewModel.signIn(email: email, password: password, omCompletion: {response, status in
                 self.hideActivityIndicator()
-                if status {
+                if response?.status == "Success" {
                     self.navigateToHomePage()
                 } else {
                     DispatchQueue.main.async {
-                        self.showErrorAlert(message: response)
+                        self.showErrorAlert(message: response?.msg)
                     }
                 }
             })

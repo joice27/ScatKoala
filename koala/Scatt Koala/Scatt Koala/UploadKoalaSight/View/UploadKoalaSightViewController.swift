@@ -62,19 +62,33 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     @IBAction func submitButtonPress(_ sender: Any) {
         let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-            self.uploadData()
+            self.uploadImage()
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(alert, animated: false)
     }
     
-    func uploadData() {
+    func uploadData(imageUrl: String) {
         if let koalaStatus = koalaStatusLabel.text, let treeSpecies = treeSpeciesField.text {
-            showActivityIndicator()
-            viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: LocationManager.shared.getCurrentLocation(), lat: LocationManager.shared.latitude, long: LocationManager.shared.longitude, treeSpecies: treeSpecies, onCompletion: {response, status in
+            viewModel.uploadKoalaDetails(koalaStatus: koalaStatus, currentLocation: LocationManager.shared.getCurrentLocation(), lat: LocationManager.shared.latitude, long: LocationManager.shared.longitude, treeSpecies: treeSpecies, imageUrl: imageUrl, onCompletion: {response, status in
                 self.hideActivityIndicator()
-                if status {
+                if response?.status == "Success" {
                     self.showAlert(message: "Successfully uploaded the Image")
+                } else {
+                    self.showAlert(message: "Error to uplod file, please try again")
+                }
+            })
+        }
+    }
+    
+    func uploadImage() {
+        if let image = koalaImageView.image {
+            showActivityIndicator()
+            NetworkManager.uploadImage(image: image, onCompletion: { response in
+                if  let url = response?.dataResponse {
+                    DispatchQueue.main.async{
+                        self.uploadData(imageUrl: url)
+                    }
                 } else {
                     self.showAlert(message: "Error to uplod file, please try again")
                 }

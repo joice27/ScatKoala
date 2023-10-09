@@ -9,10 +9,11 @@ import Foundation
 
 struct SignUpResponseModel: Codable {
     let status: String?
-    let message: MessageResponse?
+    let msg: String?
+    let dataResponse: DataResponse?
+    
+    struct DataResponse: Codable {
+        let id: Int?
+    }
 }
 
-struct MessageResponse: Codable {
-    let message: String?
-    let id: Int?
-}
