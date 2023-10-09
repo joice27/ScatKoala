@@ -9,7 +9,8 @@ import Foundation
 
 struct SignInResponseModel: Codable {
     let status: String?
-    let data: UserData?
+    let msg: String?
+    let dataResponse: UserData?
 }
 
 struct UserData: Codable {

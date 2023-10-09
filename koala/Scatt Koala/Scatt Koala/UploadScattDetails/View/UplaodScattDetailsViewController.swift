@@ -117,8 +117,10 @@ class UplaodScattDetailsViewController: UIViewController {
         showActivityIndicator()
         viewModel.uploadKoalaDetails(koalaPresent: koalaPresentOrNotLabel.text ?? "", numberOfScatCollected: numberOfScatCollectedField.text ?? "", scatCondition: scattConditionLabel.text ?? "", currentLocation: LocationManager.shared.getCurrentLocation(), lat: LocationManager.shared.latitude, long: LocationManager.shared.longitude, treeSpecies: treeSpeciesFeild.text ?? "", onCompletion: { response, status in
             self.hideActivityIndicator()
-            if status, let uploadId = response {
-                self.showSuccessView(uploadId: uploadId)
+            if response?.status == "Success" {
+                if let uploadId = response?.dataResponse?.id {
+                    self.showSuccessView(uploadId: String(uploadId))
+                }
             } else {
                 self.showAlert(message: "Error to upload the details")
             }

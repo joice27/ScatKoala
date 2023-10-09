@@ -8,17 +8,17 @@
 import Foundation
 
 class KoalaUplaodViewModel {
-    func uploadKoalaDetails(koalaStatus: String, currentLocation: String, lat: String, long: String, treeSpecies: String, onCompletion: @escaping (String?, Bool) -> ()) {
-        NetworkManager.performRequest(endpoint: .create, method: .POST, parameters: ["koalaStatus": koalaStatus, "currentLocation": currentLocation, "lat": lat, "long": long, "treeSpecies": treeSpecies, "imageUrl": "imageUrlgvdgveehvdhe"])
+    func uploadKoalaDetails(koalaStatus: String, currentLocation: String, lat: String, long: String, treeSpecies: String, imageUrl: String, onCompletion: @escaping (KoalaResponseModel?, Bool) -> ()) {
+        NetworkManager.performRequest(endpoint: .create, method: .POST, parameters: ["koalaStatus": koalaStatus, "currentLocation": currentLocation, "lat": lat, "long": long, "treeSpecies": treeSpecies, "imageUrl": imageUrl])
         { (result: Result<KoalaResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
-                onCompletion(response.status, true)
+                onCompletion(response, true)
             case .failure(let error):
                 if let serverErrorMessage = error.serverErrorMessage {
-                    onCompletion(serverErrorMessage, false)
+                    onCompletion(nil, false)
                 } else {
-                    onCompletion(error.localizedDescription, false)
+                    onCompletion(nil, false)
                 }
             }
         }

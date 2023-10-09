@@ -10,16 +10,16 @@ import UIKit
 
 class SignInViewModel {
     
-    func signIn(email: String, password: String, omCompletion: @escaping (String?, Bool) -> ()) {
+    func signIn(email: String, password: String, omCompletion: @escaping (SignInResponseModel?, Bool) -> ()) {
         NetworkManager.performRequest(endpoint: .login, method: .POST, parameters: ["email": email, "password": password]) { (result: Result<SignInResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
-                omCompletion(response.status, true)
+                omCompletion(response, true)
             case .failure(let error):
                 if let serverErrorMessage = error.serverErrorMessage {
-                    omCompletion(serverErrorMessage, false)
+                    omCompletion(nil, false)
                 } else {
-                    omCompletion(error.localizedDescription, false)
+                    omCompletion(nil, false)
                 }
             }
         }

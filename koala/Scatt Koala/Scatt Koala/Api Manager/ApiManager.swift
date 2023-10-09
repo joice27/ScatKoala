@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct APIError: Codable {
     let status: String?
@@ -11,6 +12,8 @@ struct NetworkManager {
         case create
         case userCreation
         case scatCreate
+        case verifyOtp
+        case uploadPic
         
         var path: String {
             switch self {
@@ -22,6 +25,10 @@ struct NetworkManager {
                 return "userDetail/create"
             case .scatCreate:
                 return "scat/create"
+            case .verifyOtp:
+                return "verify/otp"
+            case .uploadPic:
+                return "uploadPic"
             }
         }
     }
@@ -76,7 +83,7 @@ struct NetworkManager {
             }
         }
     }
-
+    
     static func performRequest<T: Decodable>(
         endpoint: Endpoint,
         method: ApiType,
@@ -126,12 +133,12 @@ struct NetworkManager {
             }
             
             do {
-                if let apiError = try? JSONDecoder().decode(APIError.self, from: data) {
-                    completion(.failure(.serverError(apiError)))
-                } else {
-                    let decodedObject = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decodedObject))
-                }
+                //                if let apiError = try? JSONDecoder().decode(APIError.self, from: data) {
+                //                    completion(.failure(.serverError(apiError)))
+                //                } else {
+                let decodedObject = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedObject))
+                //                }
             } catch {
                 completion(.failure(.decodingFailed(error)))
             }
@@ -139,4 +146,58 @@ struct NetworkManager {
         
         task.resume()
     }
+    
+    static func uploadImage(image: UIImage, onCompletion: @escaping (ImageResponse?) -> ()) {
+       guard let url = URL(string: "https://us-central1-koala-ba9f9.cloudfunctions.net/app/api/uploadPic") else {
+           print("Invalid URL")
+           return
+       }
+       
+       // Generate a unique boundary string
+       let boundary = "Boundary-\(UUID().uuidString)"
+       
+       var request = URLRequest(url: url)
+       request.httpMethod = "POST"
+       
+       // Set Content-Type Header to multipart/form-data with the boundary
+       request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+       
+       let httpBody = NSMutableData()
+       
+       // Append image data
+       httpBody.append("--\(boundary)\r\n".data(using: .utf8)!)
+       httpBody.append("Content-Disposition: form-data; name=\"profileImage\"; filename=\"image.png\"\r\n".data(using: .utf8)!)
+       httpBody.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+       
+       if let imageData = image.pngData() {
+           httpBody.append(imageData)
+       } else {
+           print("Failed to convert image to data")
+           return
+       }
+       
+       httpBody.append("\r\n".data(using: .utf8)!)
+       
+       // Close boundary
+       httpBody.append("--\(boundary)--\r\n".data(using: .utf8)!)
+       
+       request.httpBody = httpBody as Data
+       
+       let task = URLSession.shared.dataTask(with: request) { data, response, error in
+           if let error = error {
+               print("Error: \(error)")
+               return
+           }
+           
+           if let data = data {
+               if let responseString = String(data: data, encoding: .utf8) {
+                   print(responseString)
+               }
+               let decoder = JSONDecoder()
+               let uploadResponse = try! decoder.decode(ImageResponse.self, from: data)
+               onCompletion(uploadResponse)
+           }
+       }
+       task.resume()
+   }
 }
