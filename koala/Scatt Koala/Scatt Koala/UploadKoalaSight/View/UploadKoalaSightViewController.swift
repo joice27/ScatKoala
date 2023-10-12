@@ -38,7 +38,7 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        locationLabel.text = LocationManager.shared.getCurrentLocation()
+        locationLabel.text = LocationManager.shared.getCurrentLocation() 
     }
     
     @objc func handleTap() {

@@ -43,6 +43,7 @@ class UplaodScattDetailsViewController: UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         scattPhotoView.isHidden = true
         view.endEditing(true)
+        submitButton.backgroundColor = UIColor(red: 4/256, green: 18/256, blue: 67/256, alpha: 1)
     }
     
     func showKoalaType() {
@@ -88,18 +89,21 @@ class UplaodScattDetailsViewController: UIViewController {
     }
     
     @IBAction func excellentPhotoViewButtonClicked(_ sender: Any) {
+        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "excellent")
         scattPhotoDescriptionLabel.text = "Scats in excellenet condition appear fresh and have a glossy surface"
     }
     
     @IBAction func goodPhotoViewButtonClicked(_ sender: Any) {
+        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "good")
 
     }
     
     @IBAction func poorButtonPhotoViewClicked(_ sender: Any) {
+        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "poor")
     }
