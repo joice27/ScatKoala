@@ -14,5 +14,5 @@ struct KoalaScatResponseModel: Codable {
 }
 
 struct UploadId: Codable {
-    let id: Int?
+    let id: String?
 }

@@ -13,6 +13,7 @@ class KoalaUplaodViewModel {
         { (result: Result<KoalaResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
+                print("Koala resp", response)
                 onCompletion(response, true)
             case .failure(let error):
                 if let serverErrorMessage = error.serverErrorMessage {

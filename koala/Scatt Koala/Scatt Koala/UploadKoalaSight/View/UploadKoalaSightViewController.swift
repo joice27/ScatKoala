@@ -87,6 +87,7 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
             NetworkManager.uploadImage(image: image, onCompletion: { response in
                 if  let url = response?.dataResponse {
                     DispatchQueue.main.async{
+                        print("image resp", response)
                         self.uploadData(imageUrl: url)
                     }
                 } else {

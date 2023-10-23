@@ -49,10 +49,11 @@ class HomeViewController: UIViewController {
         self.present(alert, animated: false)
     }
     
-    @IBAction func infoButtonClicked(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "infoView") as! InfoViewController
+    @IBAction func protocolButtonClicked(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "protocolView") as! ProtocolViewController
         self.navigationController?.pushViewController(vc, animated: false)
     }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
