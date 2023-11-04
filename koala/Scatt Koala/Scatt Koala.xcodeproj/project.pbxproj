@@ -10,6 +10,17 @@
 		150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */; };
 		1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5522AD23CA1003D0CE2 /* LocationManager.swift */; };
 		1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */; };
+		157594AB2AE6A17200140CD4 /* MailingAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157594AA2AE6A17200140CD4 /* MailingAddressViewController.swift */; };
+		157594AE2AE6A37800140CD4 /* CollectionMaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157594AD2AE6A37800140CD4 /* CollectionMaterialViewController.swift */; };
+		157594B12AE6AAD100140CD4 /* DNAProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157594B02AE6AAD100140CD4 /* DNAProjectViewController.swift */; };
+		157AE5FD2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE5FC2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift */; };
+		157AE6022AE9444E00F532E6 /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = 157AE6012AE9444E00F532E6 /* DPOTPView */; };
+		157AE6062AE94FCD00F532E6 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6052AE94FCD00F532E6 /* PasswordResetViewController.swift */; };
+		157AE60A2AE951A600F532E6 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6092AE951A600F532E6 /* ForgotPasswordModel.swift */; };
+		157AE60C2AE9520600F532E6 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE60B2AE9520600F532E6 /* ForgotPasswordViewModel.swift */; };
+		157AE6122AE95B3400F532E6 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6112AE95B3400F532E6 /* NewPasswordViewController.swift */; };
+		157AE6142AE95B4300F532E6 /* NewPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6132AE95B4300F532E6 /* NewPasswordViewModel.swift */; };
+		157AE6162AE95B4F00F532E6 /* NewPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6152AE95B4F00F532E6 /* NewPasswordModel.swift */; };
 		158FD9362ADDA9EB0011492A /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FD9352ADDA9EB0011492A /* ProtocolViewController.swift */; };
 		158FD9392ADDAA410011492A /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FD9372ADDAA410011492A /* ProtocolTableViewCell.swift */; };
 		158FD93A2ADDAA410011492A /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 158FD9382ADDAA410011492A /* ProtocolTableViewCell.xib */; };
@@ -46,6 +57,16 @@
 		150318802ACF138F007A9F1A /* ScatUploadSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatUploadSuccessViewController.swift; sourceTree = "<group>"; };
 		1556E5522AD23CA1003D0CE2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		157594AA2AE6A17200140CD4 /* MailingAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailingAddressViewController.swift; sourceTree = "<group>"; };
+		157594AD2AE6A37800140CD4 /* CollectionMaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMaterialViewController.swift; sourceTree = "<group>"; };
+		157594B02AE6AAD100140CD4 /* DNAProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAProjectViewController.swift; sourceTree = "<group>"; };
+		157AE5FC2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetVerifyOTPViewController.swift; sourceTree = "<group>"; };
+		157AE6052AE94FCD00F532E6 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		157AE6092AE951A600F532E6 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
+		157AE60B2AE9520600F532E6 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		157AE6112AE95B3400F532E6 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		157AE6132AE95B4300F532E6 /* NewPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewModel.swift; sourceTree = "<group>"; };
+		157AE6152AE95B4F00F532E6 /* NewPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordModel.swift; sourceTree = "<group>"; };
 		158FD9352ADDA9EB0011492A /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		158FD9372ADDAA410011492A /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
 		158FD9382ADDAA410011492A /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
@@ -85,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157AE6022AE9444E00F532E6 /* DPOTPView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +124,119 @@
 		1556E5512AD23C8B003D0CE2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				158FD93B2ADDAF120011492A /* Constants.swift */,
 				1556E5522AD23CA1003D0CE2 /* LocationManager.swift */,
 				1556E5542AD24614003D0CE2 /* UIButton + Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		157594A92AE69FCF00140CD4 /* Mailing Address */ = {
+			isa = PBXGroup;
+			children = (
+				157594AA2AE6A17200140CD4 /* MailingAddressViewController.swift */,
+			);
+			path = "Mailing Address";
+			sourceTree = "<group>";
+		};
+		157594AC2AE6A35900140CD4 /* Collection Material */ = {
+			isa = PBXGroup;
+			children = (
+				157594AD2AE6A37800140CD4 /* CollectionMaterialViewController.swift */,
+			);
+			path = "Collection Material";
+			sourceTree = "<group>";
+		};
+		157594AF2AE6AABB00140CD4 /* DNA Project */ = {
+			isa = PBXGroup;
+			children = (
+				157594B02AE6AAD100140CD4 /* DNAProjectViewController.swift */,
+			);
+			path = "DNA Project";
+			sourceTree = "<group>";
+		};
+		157AE5FA2AE93EA500F532E6 /* Password - Reset VerifyOtp */ = {
+			isa = PBXGroup;
+			children = (
+				157AE5FB2AE93EC200F532E6 /* View */,
+			);
+			path = "Password - Reset VerifyOtp";
+			sourceTree = "<group>";
+		};
+		157AE5FB2AE93EC200F532E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				157AE5FC2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		157AE6032AE94F5C00F532E6 /* Password Reset Send Email */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6082AE9519400F532E6 /* Model */,
+				157AE6072AE9517E00F532E6 /* ViewModel */,
+				157AE6042AE94F7700F532E6 /* View */,
+			);
+			path = "Password Reset Send Email";
+			sourceTree = "<group>";
+		};
+		157AE6042AE94F7700F532E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6052AE94FCD00F532E6 /* PasswordResetViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		157AE6072AE9517E00F532E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				157AE60B2AE9520600F532E6 /* ForgotPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		157AE6082AE9519400F532E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6092AE951A600F532E6 /* ForgotPasswordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		157AE60D2AE95AF300F532E6 /* Password Reset New Password */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6102AE95B1F00F532E6 /* Model */,
+				157AE60F2AE95B1200F532E6 /* ViewModel */,
+				157AE60E2AE95B0B00F532E6 /* View */,
+			);
+			path = "Password Reset New Password";
+			sourceTree = "<group>";
+		};
+		157AE60E2AE95B0B00F532E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6112AE95B3400F532E6 /* NewPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		157AE60F2AE95B1200F532E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6132AE95B4300F532E6 /* NewPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		157AE6102AE95B1F00F532E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				157AE6152AE95B4F00F532E6 /* NewPasswordModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		158FD9342ADDA9D30011492A /* Protocol */ = {
@@ -163,7 +294,12 @@
 		15DCBE962ACE0D01001682DF /* Scatt Koala */ = {
 			isa = PBXGroup;
 			children = (
-				158FD93B2ADDAF120011492A /* Constants.swift */,
+				157AE60D2AE95AF300F532E6 /* Password Reset New Password */,
+				157AE6032AE94F5C00F532E6 /* Password Reset Send Email */,
+				157AE5FA2AE93EA500F532E6 /* Password - Reset VerifyOtp */,
+				157594AF2AE6AABB00140CD4 /* DNA Project */,
+				157594AC2AE6A35900140CD4 /* Collection Material */,
+				157594A92AE69FCF00140CD4 /* Mailing Address */,
 				158FD9342ADDA9D30011492A /* Protocol */,
 				15BD85862AD474F800324D56 /* OTP Verification */,
 				1556E5512AD23C8B003D0CE2 /* Common */,
@@ -396,6 +532,9 @@
 			dependencies = (
 			);
 			name = "Scatt Koala";
+			packageProductDependencies = (
+				157AE6012AE9444E00F532E6 /* DPOTPView */,
+			);
 			productName = "Scatt Koala";
 			productReference = 15DCBE942ACE0D01001682DF /* Scatt Koala.app */;
 			productType = "com.apple.product-type.application";
@@ -424,6 +563,9 @@
 				Base,
 			);
 			mainGroup = 15DCBE8B2ACE0D01001682DF;
+			packageReferences = (
+				157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */,
+			);
 			productRefGroup = 15DCBE952ACE0D01001682DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -454,17 +596,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DCBEDB2ACE35AF001682DF /* KoalaUplaodViewModel.swift in Sources */,
+				157594B12AE6AAD100140CD4 /* DNAProjectViewController.swift in Sources */,
+				157AE5FD2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift in Sources */,
 				15BD858E2AD480BC00324D56 /* VerifyOtpResponseModel.swift in Sources */,
+				157AE6142AE95B4300F532E6 /* NewPasswordViewModel.swift in Sources */,
 				158FD9362ADDA9EB0011492A /* ProtocolViewController.swift in Sources */,
 				1556E5552AD24614003D0CE2 /* UIButton + Extension.swift in Sources */,
 				158FD93C2ADDAF120011492A /* Constants.swift in Sources */,
 				15DCBE982ACE0D01001682DF /* AppDelegate.swift in Sources */,
 				15DCBED52ACE32DB001682DF /* File.swift in Sources */,
 				15DCBECC2ACE2018001682DF /* ApiManager.swift in Sources */,
+				157AE6162AE95B4F00F532E6 /* NewPasswordModel.swift in Sources */,
+				157594AB2AE6A17200140CD4 /* MailingAddressViewController.swift in Sources */,
 				15DCBEE92ACE45EC001682DF /* SignUpViewModel.swift in Sources */,
 				158FD9392ADDAA410011492A /* ProtocolTableViewCell.swift in Sources */,
 				15DCBEC42ACE1CBE001682DF /* KoalaGallaryCollectionViewCell.swift in Sources */,
 				15BD85882AD4751600324D56 /* VerifyOTPViewController.swift in Sources */,
+				157594AE2AE6A37800140CD4 /* CollectionMaterialViewController.swift in Sources */,
 				15DCBEE72ACE4379001682DF /* SignUpViewController.swift in Sources */,
 				15DCBED22ACE2C7C001682DF /* ViewModel.swift in Sources */,
 				15DCBE9A2ACE0D01001682DF /* SceneDelegate.swift in Sources */,
@@ -472,14 +620,18 @@
 				15DCBEBC2ACE1815001682DF /* UplaodScattDetailsViewController.swift in Sources */,
 				15DCBEDE2ACE40A5001682DF /* KoalaScatResponseModel.swift in Sources */,
 				150318812ACF138F007A9F1A /* ScatUploadSuccessViewController.swift in Sources */,
+				157AE60A2AE951A600F532E6 /* ForgotPasswordModel.swift in Sources */,
 				15DCBED92ACE3596001682DF /* KoalaResponseModel.swift in Sources */,
 				15DCBEB02ACE12D2001682DF /* SignInViewController.swift in Sources */,
+				157AE6122AE95B3400F532E6 /* NewPasswordViewController.swift in Sources */,
 				15DCBEC82ACE1D8E001682DF /* InfoViewController.swift in Sources */,
 				15DCBEE12ACE40E9001682DF /* KoalaScatUploadViewModel.swift in Sources */,
 				1556E5532AD23CA1003D0CE2 /* LocationManager.swift in Sources */,
 				15DCBEEB2ACE4798001682DF /* SignUpResponseModel.swift in Sources */,
 				15DCBECF2ACE21F7001682DF /* SignInResponseModel.swift in Sources */,
+				157AE60C2AE9520600F532E6 /* ForgotPasswordViewModel.swift in Sources */,
 				15DCBEC02ACE1C20001682DF /* HomeViewController.swift in Sources */,
+				157AE6062AE94FCD00F532E6 /* PasswordResetViewController.swift in Sources */,
 				15BD858C2AD480A200324D56 /* VerifyOtpViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,9 +774,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 5495D924VD;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = M6ENXWGY3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -640,6 +794,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "albish.com.Scatt-Koala";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "General Profile Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,9 +807,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 5495D924VD;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = M6ENXWGY3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -669,6 +827,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "albish.com.Scatt-Koala";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "General Profile Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -697,6 +857,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Datt1994/DPOTPView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.12;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		157AE6012AE9444E00F532E6 /* DPOTPView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */;
+			productName = DPOTPView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15DCBE8C2ACE0D01001682DF /* Project object */;
 }

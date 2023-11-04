@@ -2,7 +2,6 @@
 //  UplaodScattDetailsViewController.swift
 //  Scatt Koala
 //
-//  Created by Joice George on 05/10/23.
 //
 
 import UIKit
@@ -10,6 +9,7 @@ import CoreLocation
 
 class UplaodScattDetailsViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var treeSpeciesFeild: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var numberOfScatCollectedField: UITextField!
@@ -37,14 +37,17 @@ class UplaodScattDetailsViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         view.addGestureRecognizer(tap)
         showKoalaType()
-        currentLocationLabel.text = "Mananthavady"
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        currentLocationLabel.text = LocationManager.shared.getCurrentLocation()
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         scattPhotoView.isHidden = true
         view.endEditing(true)
-        submitButton.backgroundColor = UIColor(red: 4/256, green: 18/256, blue: 67/256, alpha: 1)
     }
     
     func showKoalaType() {
@@ -69,6 +72,7 @@ class UplaodScattDetailsViewController: UIViewController {
     
     @IBAction func selectScattConditionClicked(_ sender: Any) {
         self.scattConditionView.isHidden = false
+        titleLabel.text = "Koala Scat Condition"
     }
     
     @IBAction func goodButtonClicked(_ sender: Any) {
@@ -77,7 +81,7 @@ class UplaodScattDetailsViewController: UIViewController {
         poorButton.setImage(UIImage(), for: .normal)
         self.scattConditionView.isHidden = true
         scattConditionLabel.text = "Good"
-
+        titleLabel.text = "Koala Scat Collection"
     }
     
     @IBAction func excellentButtonClicked(_ sender: Any) {
@@ -86,27 +90,25 @@ class UplaodScattDetailsViewController: UIViewController {
         goodButton.setImage(UIImage(), for: .normal)
         self.scattConditionView.isHidden = true
         scattConditionLabel.text = "Excellent"
-
+        titleLabel.text = "Koala Scat Collection"
     }
     
     @IBAction func excellentPhotoViewButtonClicked(_ sender: Any) {
-        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "excellent")
-        scattPhotoDescriptionLabel.text = "Scats in excellenet condition appear fresh and have a glossy surface"
+        scattPhotoDescriptionLabel.text = "Excellent: scats appear fresh and have a glossy surface."
     }
     
     @IBAction func goodPhotoViewButtonClicked(_ sender: Any) {
-        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "good")
-
+        scattPhotoDescriptionLabel.text = "Good: scats have some level of gloss across all or part of their surface."
     }
     
     @IBAction func poorButtonPhotoViewClicked(_ sender: Any) {
-        submitButton.backgroundColor = .white
         scattPhotoView.isHidden = false
         scattPhotoImageView.image = UIImage(named: "poor")
+        scattPhotoDescriptionLabel.text = "Poor: scats may be dull in colour, cracked or damaged, with little surface shine."
     }
     
     @IBAction func submitButtonClicked(_ sender: Any) {

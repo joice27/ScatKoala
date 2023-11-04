@@ -2,7 +2,6 @@
 //  ProtocolViewController.swift
 //  Scatt Koala
 //
-//  Created by Joice George on 16/10/23.
 //
 
 import UIKit
@@ -24,24 +23,29 @@ class ProtocolViewController: UIViewController {
 
 extension ProtocolViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "instructionCell", for: indexPath) as! ProtocolTableViewCell
         if indexPath.row == 0 {
+            cell.titleLabel.text = SIGHT_KOLA_TITLE
             cell.descriptionLabel.text = SIGHT_KOALA
             cell.instructionImageView.image = UIImage(named: "first")
         } else if indexPath.row == 1 {
+            cell.titleLabel.text = FRESH_SCAT_TITLE
             cell.descriptionLabel.text = FRESH_SCAT
             cell.instructionImageView.image = UIImage(named: "second")
         } else if indexPath.row == 2 {
+            cell.titleLabel.text = THIRD_TITLE
             cell.descriptionLabel.text = THIRD
             cell.instructionImageView.image = UIImage(named: "third")
         } else if indexPath.row == 3 {
+            cell.titleLabel.text = FOURTH_TITLE
             cell.descriptionLabel.text = FOURTH
             cell.instructionImageView.image = UIImage(named: "fourth")
-        } else {
+        } else  {
+            cell.titleLabel.text = FIFTH_TITLE
             cell.descriptionLabel.text = FIFTH
             cell.instructionImageView.image = UIImage(named: "fifth")
         }

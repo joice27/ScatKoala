@@ -2,7 +2,6 @@
 //  HomeViewController.swift
 //  Koala Scat Collection
 //
-//  Created by Joice George on 02/09/23.
 //
 
 import UIKit
@@ -54,6 +53,25 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
+    @IBAction func mailingAddressButtonClicked(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mailingAddress") as! MailingAddressViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+
+    }
+    
+    @IBAction func collectionMaterialButtonClicked(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionMaterial") as! CollectionMaterialViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+
+    }
+    
+    @IBAction func dnaProjectClicked(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dnaView") as! DNAProjectViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {

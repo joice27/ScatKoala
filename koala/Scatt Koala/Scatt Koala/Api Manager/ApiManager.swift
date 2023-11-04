@@ -14,6 +14,8 @@ struct NetworkManager {
         case scatCreate
         case verifyOtp
         case uploadPic
+        case forgotPassword
+        case resetPassword
         
         var path: String {
             switch self {
@@ -29,6 +31,10 @@ struct NetworkManager {
                 return "verify/otp"
             case .uploadPic:
                 return "uploadPic"
+            case .forgotPassword:
+                return "fogotpassword/sendemail"
+            case .resetPassword:
+                return "userDetail/updatePassword"
             }
         }
     }

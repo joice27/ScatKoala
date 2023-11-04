@@ -2,7 +2,6 @@
 //  SignInViewController.swift
 //  Scatt Koala
 //
-//  Created by Joice George on 05/10/23.
 //
 
 import UIKit
@@ -72,6 +71,13 @@ class SignInViewController: UIViewController {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
         self.present(alert, animated: false)
+    }
+    
+    @IBAction func forgotPasswordClicked(_ sender: Any) {
+        
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "forgotPasswordView") as? PasswordResetViewController {
+            self.navigationController?.pushViewController(viewController, animated: false)
+        }
     }
     
     @IBAction func signUpButtonClick(_ sender: Any) {

@@ -2,7 +2,6 @@
 //  VerifyOtpViewModel.swift
 //  Scatt Koala
 //
-//  Created by Joice George on 10/10/23.
 //
 
 import Foundation
@@ -14,11 +13,9 @@ class VerifyOtpViewModel {
             switch result {
                 
             case .success(let response):
-                print("joice success", response.msg)
                 onCompletion(response.msg, response.status, true)
             case .failure(let error):
                 onCompletion(error.serverErrorMessage, error.localizedDescription, false)
-                print("joice failiure", error.localizedDescription)
             }
         }
     }

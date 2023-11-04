@@ -2,7 +2,6 @@
 //  SignUpViewModel.swift
 //  Scatt Koala
 //
-//  Created by Joice George on 05/10/23.
 //
 
 import Foundation
@@ -12,7 +11,6 @@ class SignUpViewModel {
         NetworkManager.performRequest(endpoint: .userCreation, method: .POST, parameters: ["email": email, "password": password, "lastName": lastName, "firstName": firstName]) { (result: Result<SignUpResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
-                print("joice 1", response.msg)
                 
                 onCompletion(response, true)
 //                if let id = response.dataResponse?.id {

@@ -2,8 +2,6 @@
 //  KoalaGallaryCollectionViewCell.swift
 //  Koala Scat Collection
 //
-//  Created by Joice George on 19/09/23.
-//
 
 import UIKit
 

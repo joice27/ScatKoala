@@ -2,7 +2,6 @@
 //  SceneDelegate.swift
 //  Koala Scat Collection
 //
-//  Created by Joice George on 02/09/23.
 //
 
 import UIKit
