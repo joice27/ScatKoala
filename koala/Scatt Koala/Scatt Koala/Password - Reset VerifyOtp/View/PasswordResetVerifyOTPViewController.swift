@@ -37,8 +37,8 @@ class PasswordResetVerifyOTPViewController: UIViewController {
                     self.navigateToResetPasswordView()
                 } else if status == "Failed" {
                     DispatchQueue.main.async {
-//                        self.showAlert()
-                        self.navigateToResetPasswordView()
+                        self.showAlert()
+//                        self.navigateToResetPasswordView()
                     }
                 }
             })

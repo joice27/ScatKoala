@@ -29,6 +29,7 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
         takePhotoButton.setCornerRadius()
         imagePicker.delegate = self
         showKoalaType()
+        koalaImageView.image = UIImage(systemName: "photo.circle")
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tapGesture)
@@ -59,12 +60,17 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     }
     
     @IBAction func submitButtonPress(_ sender: Any) {
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-            self.uploadImage()
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        self.present(alert, animated: false)
+        
+        if koalaImageView.image == UIImage(systemName: "photo.circle") || koalaStatusLabel.text == "Select" || treeSpeciesField.text == "" {
+            self.showAlert(message: "All fields are required")
+        } else {
+            let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                self.uploadImage()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self.present(alert, animated: false)
+        }
     }
     
     func uploadData(imageUrl: String) {
@@ -86,7 +92,6 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
             NetworkManager.uploadImage(image: image, onCompletion: { response in
                 if  let url = response?.dataResponse {
                     DispatchQueue.main.async{
-                        print("image resp", response)
                         self.uploadData(imageUrl: url)
                     }
                 } else {

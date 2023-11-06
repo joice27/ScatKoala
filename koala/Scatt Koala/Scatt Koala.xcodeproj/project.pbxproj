@@ -14,7 +14,6 @@
 		157594AE2AE6A37800140CD4 /* CollectionMaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157594AD2AE6A37800140CD4 /* CollectionMaterialViewController.swift */; };
 		157594B12AE6AAD100140CD4 /* DNAProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157594B02AE6AAD100140CD4 /* DNAProjectViewController.swift */; };
 		157AE5FD2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE5FC2AE93EEA00F532E6 /* PasswordResetVerifyOTPViewController.swift */; };
-		157AE6022AE9444E00F532E6 /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = 157AE6012AE9444E00F532E6 /* DPOTPView */; };
 		157AE6062AE94FCD00F532E6 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6052AE94FCD00F532E6 /* PasswordResetViewController.swift */; };
 		157AE60A2AE951A600F532E6 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE6092AE951A600F532E6 /* ForgotPasswordModel.swift */; };
 		157AE60C2AE9520600F532E6 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157AE60B2AE9520600F532E6 /* ForgotPasswordViewModel.swift */; };
@@ -106,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157AE6022AE9444E00F532E6 /* DPOTPView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +531,6 @@
 			);
 			name = "Scatt Koala";
 			packageProductDependencies = (
-				157AE6012AE9444E00F532E6 /* DPOTPView */,
 			);
 			productName = "Scatt Koala";
 			productReference = 15DCBE942ACE0D01001682DF /* Scatt Koala.app */;
@@ -564,7 +561,6 @@
 			);
 			mainGroup = 15DCBE8B2ACE0D01001682DF;
 			packageReferences = (
-				157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */,
 			);
 			productRefGroup = 15DCBE952ACE0D01001682DF /* Products */;
 			projectDirPath = "";
@@ -774,18 +770,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = M6ENXWGY3Q;
+				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To capture Images of the Koala";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To get the current location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To get the current location when uplaoding the photo of koala";
+				INFOPLIST_KEY_NSLocationUsageDescription = "To get the current location when uplaoding the photo of koala";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get the current location when uplaoding the photo of koala";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -795,7 +795,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "albish.com.Scatt-Koala";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "General Profile Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -807,18 +806,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = M6ENXWGY3Q;
+				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To capture Images of the Koala";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To get the current location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To get the current location when uplaoding the photo of koala";
+				INFOPLIST_KEY_NSLocationUsageDescription = "To get the current location when uplaoding the photo of koala";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get the current location when uplaoding the photo of koala";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -828,7 +831,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "albish.com.Scatt-Koala";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "General Profile Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -857,25 +859,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Datt1994/DPOTPView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.12;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		157AE6012AE9444E00F532E6 /* DPOTPView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 157AE6002AE9444E00F532E6 /* XCRemoteSwiftPackageReference "DPOTPView" */;
-			productName = DPOTPView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15DCBE8C2ACE0D01001682DF /* Project object */;
 }

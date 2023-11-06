@@ -8,6 +8,7 @@ import UIKit
 
 class PasswordResetViewController: UIViewController {
 
+    @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var emailIdView: UIView!
     @IBOutlet weak var emailIdField: UITextField!
     
@@ -18,6 +19,7 @@ class PasswordResetViewController: UIViewController {
 
         emailIdView.layer.cornerRadius = 10
         emailIdView.layer.borderWidth = 1
+        continueButton.setCornerRadius()
     }
     
     @IBAction func continueButtonClicked(_ sender: Any) {

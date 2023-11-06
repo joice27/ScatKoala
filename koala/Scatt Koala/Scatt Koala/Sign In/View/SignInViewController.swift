@@ -45,17 +45,21 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInButtonClick(_ sender: Any) {
         if let email = userNameField.text, let password = passwordField.text {
-            showActivityIndicator()
-            viewModel.signIn(email: email, password: password, omCompletion: {response, status in
-                self.hideActivityIndicator()
-                if response?.status == "Success" {
-                    self.navigateToHomePage()
-                } else {
-                    DispatchQueue.main.async {
-                        self.showErrorAlert(message: response?.msg)
+            if email.isEmpty || password.isEmpty {
+                self.showErrorAlert(message: "Username or password cannot be empty.")
+            } else {
+                showActivityIndicator()
+                viewModel.signIn(email: email, password: password, omCompletion: {response, status in
+                    self.hideActivityIndicator()
+                    if response?.status == "Success" {
+                        self.navigateToHomePage()
+                    } else {
+                        DispatchQueue.main.async {
+                            self.showErrorAlert(message: response?.msg)
+                        }
                     }
-                }
-            })
+                })
+            }
         }
     }
     

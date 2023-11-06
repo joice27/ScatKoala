@@ -112,12 +112,16 @@ class UplaodScattDetailsViewController: UIViewController {
     }
     
     @IBAction func submitButtonClicked(_ sender: Any) {
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-            self.uploadData()
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        self.present(alert, animated: false)
+        if koalaPresentOrNotLabel.text == "" || numberOfScatCollectedField.text == "" || scattConditionLabel.text == "" || treeSpeciesFeild.text == "" {
+            self.showAlert(message: "All fields are required")
+        } else {
+            let alert = UIAlertController(title: nil, message: "Are you sure you want to submit?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                self.uploadData()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self.present(alert, animated: false)
+        }
     }
     
     func uploadData() {
