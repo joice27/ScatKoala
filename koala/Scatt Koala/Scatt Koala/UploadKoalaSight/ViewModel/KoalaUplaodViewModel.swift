@@ -14,7 +14,7 @@ class KoalaUplaodViewModel {
             case .success(let response):
                 onCompletion(response, true)
             case .failure(let error):
-                if let serverErrorMessage = error.serverErrorMessage {
+                if error.serverErrorMessage != nil {
                     onCompletion(nil, false)
                 } else {
                     onCompletion(nil, false)

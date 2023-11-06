@@ -15,7 +15,7 @@ class SignInViewModel {
             case .success(let response):
                 omCompletion(response, true)
             case .failure(let error):
-                if let serverErrorMessage = error.serverErrorMessage {
+                if error.serverErrorMessage != nil {
                     omCompletion(nil, false)
                 } else {
                     omCompletion(nil, false)

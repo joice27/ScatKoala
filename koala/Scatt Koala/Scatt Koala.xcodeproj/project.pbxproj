@@ -776,6 +776,7 @@
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Koala Scat App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture Images of the Koala";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To get the current location";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To get the current location when uplaoding the photo of koala";
@@ -812,6 +813,7 @@
 				DEVELOPMENT_TEAM = 5495D924VD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scatt Koala/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Koala Scat App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture Images of the Koala";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To get the current location";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "To get the current location when uplaoding the photo of koala";

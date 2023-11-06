@@ -19,7 +19,7 @@ class SignUpViewModel {
 //                    omCompletion(response.msg, nil, true) // id is nil, pass nil
 //                }
             case .failure(let error):
-                if let serverErrorMessage = error.serverErrorMessage {
+                if error.serverErrorMessage != nil {
                     onCompletion(nil, false)
                 } else {
                     onCompletion(nil, false)
