@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var gallaryPageControl: UIPageControl!
     let imageArray: [String] = ["koala1", "koala2", "koala3"]
     let locationManager = LocationManager.shared
+    let viewModel: HomeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,7 @@ class HomeViewController: UIViewController {
     @IBAction func logoutButtonClicked(_ sender: Any) {
         let alert = UIAlertController(title: "Logout", message: "Are you sure want to Logout!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {_ in
-            
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "firstView") as! SignInViewController
-            self.navigationController?.pushViewController(vc, animated: false)
-            UserDefaults.standard.setValue(false, forKey: "loggedIn")
+            self.navigateToSignInView()
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(alert, animated: false)
@@ -71,6 +69,39 @@ class HomeViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dnaView") as! DNAProjectViewController
         self.navigationController?.pushViewController(vc, animated: false)
 
+    }
+    
+    @IBAction func deleteAccoutClicked(_ sender: Any) {
+        let alert = UIAlertController(title: "Delete Account", message: "Are you sure you want to delete your account?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: {_ in
+            self.deleteAccount()
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style: .cancel))
+        self.present(alert, animated: false)
+    }
+    
+    func navigateToSignInView() {
+        DispatchQueue.main.async {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "firstView") as! SignInViewController
+            self.navigationController?.pushViewController(vc, animated: false)
+            UserDefaults.standard.setValue(false, forKey: "loggedIn")
+        }
+    }
+    
+    func deleteAccount() {
+        self.showActivityIndicator()
+        self.viewModel.deleteAccount(onCompletion: { status in
+            self.hideActivityIndicator()
+            if status {
+                self.navigateToSignInView()
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Unable to delete the account", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                DispatchQueue.main.async {
+                    self.present(alert, animated: false)
+                }
+            }
+        })
     }
 }
 

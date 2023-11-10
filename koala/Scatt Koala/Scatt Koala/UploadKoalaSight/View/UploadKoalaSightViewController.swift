@@ -8,7 +8,7 @@ import UIKit
 import CoreLocation
 
 class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var treeSpeciesLabel: UILabel!
     @IBOutlet weak var treeSpeciesField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
@@ -103,23 +103,29 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     
     @IBAction func takePhotoClicked(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-
-                let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (_) in
-                    self.imagePicker.sourceType = .camera
-                    self.present(self.imagePicker, animated: true, completion: nil)
-                }
-
-                let photoLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { (_) in
-                    self.imagePicker.sourceType = .photoLibrary
-                    self.present(self.imagePicker, animated: true, completion: nil)
-                }
-
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-                alertController.addAction(cameraAction)
-                alertController.addAction(photoLibraryAction)
-                alertController.addAction(cancelAction)
-                present(alertController, animated: true, completion: nil)
+        
+        let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { (_) in
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        let photoLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { (_) in
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cameraAction)
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cancelAction)
+        if let button = sender as? UIButton {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                alertController.popoverPresentationController?.sourceView = button
+                alertController.popoverPresentationController?.sourceRect = button.bounds
+            }
+        }
+        present(alertController, animated: true, completion: nil)
     }
     
     func showAlert(message: String) {
@@ -131,14 +137,14 @@ class UploadKoalaSightViewController: UIViewController, UIImagePickerControllerD
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let image = info[.originalImage] as? UIImage {
-                self.koalaImageView.image = image
-            }
-            picker.dismiss(animated: true, completion: nil)
+        if let image = info[.originalImage] as? UIImage {
+            self.koalaImageView.image = image
         }
-
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true, completion: nil)
-        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 

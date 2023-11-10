@@ -620,6 +620,18 @@
                                             <action selector="logoutButtonClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="fiz-IN-aCP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zx-EL-D4X">
+                                        <rect key="frame" x="162.5" y="225" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YId-JS-e2l"/>
+                                            <constraint firstAttribute="width" constant="50" id="jVc-Hz-M3F"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="deleteAccount"/>
+                                        <connections>
+                                            <action selector="deleteAccoutClicked:" destination="IWJ-tt-46s" eventType="touchUpInside" id="jLk-MH-LtF"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERu-MC-RAE">
                                         <rect key="frame" x="7" y="278" width="106" height="30"/>
                                         <constraints>
@@ -630,18 +642,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-qm-1BH">
+                                        <rect key="frame" x="134.5" y="278" width="106" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HfP-Of-XvX"/>
+                                            <constraint firstAttribute="width" constant="106" id="Kc8-eC-P13"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="4Zx-EL-D4X" firstAttribute="centerX" secondItem="2k8-1A-CzN" secondAttribute="centerX" id="0fw-93-3Na"/>
                                     <constraint firstItem="HpG-By-6L7" firstAttribute="centerX" secondItem="2k8-1A-CzN" secondAttribute="centerX" id="5TU-U7-p5n"/>
+                                    <constraint firstItem="C3l-qm-1BH" firstAttribute="centerX" secondItem="4Zx-EL-D4X" secondAttribute="centerX" id="5fm-mF-73t"/>
                                     <constraint firstAttribute="trailing" secondItem="dDb-WP-xdm" secondAttribute="trailing" constant="35" id="6Bk-sA-deb"/>
                                     <constraint firstItem="2k8-1A-CzN" firstAttribute="top" secondItem="Evt-37-fnO" secondAttribute="top" id="9XH-97-2rR"/>
                                     <constraint firstItem="Wvb-1p-rew" firstAttribute="top" secondItem="nev-o0-kvs" secondAttribute="bottom" constant="15" id="9gu-3g-SjF"/>
+                                    <constraint firstItem="C3l-qm-1BH" firstAttribute="top" secondItem="ERu-MC-RAE" secondAttribute="top" id="BGi-Mo-AMS"/>
                                     <constraint firstItem="sXh-E7-AcG" firstAttribute="leading" secondItem="dDb-WP-xdm" secondAttribute="leading" id="GGl-cq-XHV"/>
                                     <constraint firstItem="Evt-37-fnO" firstAttribute="leading" secondItem="X4J-Lp-dE4" secondAttribute="leading" id="JSW-H1-AHw"/>
                                     <constraint firstItem="w1d-Ni-5lr" firstAttribute="centerX" secondItem="bsF-Yz-mOO" secondAttribute="centerX" id="NHR-Jk-N2x"/>
                                     <constraint firstItem="q3A-lW-6T1" firstAttribute="centerX" secondItem="X4J-Lp-dE4" secondAttribute="centerX" id="Ref-Sa-hSb"/>
                                     <constraint firstItem="X4J-Lp-dE4" firstAttribute="leading" secondItem="bsF-Yz-mOO" secondAttribute="leading" constant="35" id="VLi-yE-jMv"/>
+                                    <constraint firstItem="4Zx-EL-D4X" firstAttribute="top" secondItem="Wvb-1p-rew" secondAttribute="top" id="XGT-O6-sl6"/>
                                     <constraint firstItem="sXh-E7-AcG" firstAttribute="top" secondItem="2k8-1A-CzN" secondAttribute="top" id="Zoz-Wc-9nR"/>
                                     <constraint firstItem="ERu-MC-RAE" firstAttribute="top" secondItem="Wvb-1p-rew" secondAttribute="bottom" constant="3" id="a5i-MO-bkI"/>
                                     <constraint firstItem="HpG-By-6L7" firstAttribute="top" secondItem="2k8-1A-CzN" secondAttribute="bottom" constant="5" id="afy-VL-lSb"/>
@@ -1911,6 +1937,7 @@
         <image name="about 1" width="1626" height="1626"/>
         <image name="collectionMaterial" width="258" height="296"/>
         <image name="defaultImage" width="750" height="750"/>
+        <image name="deleteAccount" width="256" height="256"/>
         <image name="logo white" width="886" height="147.5"/>
         <image name="logout" width="640.5" height="640.5"/>
         <image name="mailing adress" width="367.5" height="382"/>

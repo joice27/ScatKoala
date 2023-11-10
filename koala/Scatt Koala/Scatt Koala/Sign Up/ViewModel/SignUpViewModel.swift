@@ -11,7 +11,7 @@ class SignUpViewModel {
         NetworkManager.performRequest(endpoint: .userCreation, method: .POST, parameters: ["email": email, "password": password, "lastName": lastName, "firstName": firstName]) { (result: Result<SignUpResponseModel, NetworkManager.NetworkError>) in
             switch result {
             case .success(let response):
-                
+                UserDefaults.standard.setValue(response.dataResponse?.id, forKey: "userId")
                 onCompletion(response, true)
 //                if let id = response.dataResponse?.id {
 //                    omCompletion(response.msg, id, true)

@@ -18,5 +18,7 @@ struct UserData: Codable {
     let password: String?
     let id: Int?
     let email: String?
+    let isVerified: Bool?
+    let usertype: String?
 }
 

@@ -16,6 +16,7 @@ struct NetworkManager {
         case uploadPic
         case forgotPassword
         case resetPassword
+        case deletAccount
         
         var path: String {
             switch self {
@@ -35,6 +36,8 @@ struct NetworkManager {
                 return "fogotpassword/sendemail"
             case .resetPassword:
                 return "userDetail/updatePassword"
+            case .deletAccount:
+                return "userDetail/deleteAccount"
             }
         }
     }
@@ -98,7 +101,7 @@ struct NetworkManager {
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
         
-        let baseURLString = "https://us-central1-koala-ba9f9.cloudfunctions.net/app/api"
+        let baseURLString = "https://us-central1-koala-scat-app.cloudfunctions.net/app/api"
         guard let baseURL = URL(string: baseURLString) else {
             completion(.failure(.invalidURL))
             return
@@ -129,6 +132,7 @@ struct NetworkManager {
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            print("Data", String(data: data!, encoding: .utf8))
             if let error = error {
                 completion(.failure(.requestFailed(error)))
                 return
@@ -153,6 +157,12 @@ struct NetworkManager {
         task.resume()
     }
     
+    static func randomString() -> String {
+        let length = Int.random(in: 1..<5)
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
     static func uploadImage(image: UIImage, onCompletion: @escaping (ImageResponse?) -> ()) {
        guard let url = URL(string: "https://us-central1-koala-ba9f9.cloudfunctions.net/app/api/uploadPic") else {
            print("Invalid URL")
@@ -172,7 +182,7 @@ struct NetworkManager {
        
        // Append image data
        httpBody.append("--\(boundary)\r\n".data(using: .utf8)!)
-       httpBody.append("Content-Disposition: form-data; name=\"profileImage\"; filename=\"image.png\"\r\n".data(using: .utf8)!)
+        httpBody.append("Content-Disposition: form-data; name=\"profileImage\"; filename=\"\(NetworkManager.randomString()).png\"\r\n".data(using: .utf8)!)
        httpBody.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
        
        if let imageData = image.pngData() {
